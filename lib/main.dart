@@ -34,28 +34,26 @@ class HomePage extends StatelessWidget {
       body:Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: SingleChildScrollView(
-            child: Card(
-            child: Column(
-             children: [Image.asset(
-                 "image/img1.jpg"
+          child: Card(
+          child: Column(
+           children: [Image.asset(
+               "image/img1.jpg"
+           ),
+             Text("Change my Name",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
              ),
-               Text("Change my Name",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
+             Padding(
+               padding: const EdgeInsets.all(10.0),
+               child: TextField(decoration: InputDecoration(hintText: "Enter Some Text",
+               labelText: "Name"),
+
                ),
-               Padding(
-                 padding: const EdgeInsets.all(10.0),
-                 child: TextField(decoration: InputDecoration(hintText: "Enter Some Text",
-                 labelText: "Name"),
+             )
 
-                 ),
-               )
-
-             ],
+           ],
 
        ),
 
       ),
-          ),
         ),
       // child: row(
       //   mainAxisAlignment:MainAxisAlignment.spaceEvenly  ,
