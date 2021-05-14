@@ -1,4 +1,6 @@
 
+import 'dart:ui';
+
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +20,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(
 
       title: Text("Mr.Kumar 1st App",
         style: TextStyle(
@@ -27,86 +31,98 @@ class HomePage extends StatelessWidget {
         ),
       )
     ),
-      body:Container(
-      height: 500,
-      color: Colors.black26,
-      child: Row(
-        mainAxisAlignment:MainAxisAlignment.spaceEvenly  ,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            padding: const EdgeInsets.all(10),
-            width: 100,
-            height: 100,
-            alignment: Alignment.topCenter,
-            decoration: BoxDecoration(color: Colors.grey,
-                borderRadius:BorderRadius.circular(10),
-                gradient: LinearGradient(colors:[ Colors.blue, Colors.orangeAccent ]),
-                boxShadow: [BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 10,
-                ),
-                ] ),
+      body:Center(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Card(
+          child: Column(
+           children: [Image.asset(
+               "image/img1.jpg",
 
-            child: Text("Mr.kumar 1st Box",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 18, color: Colors.white70,fontWeight: FontWeight.bold,
+           ),
+           ],
 
-
-              ),
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            width: 100,
-            height: 100,
-            alignment: Alignment.topCenter,
-            decoration: BoxDecoration(color: Colors.grey,
-                borderRadius:BorderRadius.circular(10),
-                gradient: LinearGradient(colors:[ Colors.blue, Colors.orangeAccent ]),
-                boxShadow: [BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 10,
-                ),
-                ] ),
-
-            child: Text("Mr.kumar 2nd Box",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 18, color: Colors.white70,fontWeight: FontWeight.bold,
-
-
-              ),
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            width: 100,
-            height: 100,
-            alignment: Alignment.topCenter,
-            decoration: BoxDecoration(color: Colors.grey,
-                borderRadius:BorderRadius.circular(10),
-                gradient: LinearGradient(colors:[ Colors.blue, Colors.orangeAccent ]),
-                boxShadow: [BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 10,
-                ),
-                ] ),
-
-            child: Text("Mr.kumar 3rd Box",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 18, color: Colors.white70,fontWeight: FontWeight.bold,
-
-
-              ),
-            ),
-          ),
-
-        ],
+       ),
 
       ),
+        ),
+      // child: row(
+      //   mainAxisAlignment:MainAxisAlignment.spaceEvenly  ,
+      //   crossAxisAlignment: CrossAxisAlignment.center,
+      //   children: [
+      //     Container(
+      //       padding: const EdgeInsets.all(10),
+      //       width: 100,
+      //       height: 100,
+      //       alignment: Alignment.topCenter,
+      //       decoration: BoxDecoration(color: Colors.grey,
+      //           borderRadius:BorderRadius.circular(10),
+      //           gradient: LinearGradient(colors:[ Colors.blue, Colors.orangeAccent ]),
+      //           boxShadow: [BoxShadow(
+      //             color: Colors.grey,
+      //             blurRadius: 10,
+      //           ),
+      //           ] ),
+      //
+      //       child: Text("Mr.kumar 1st Box",
+      //         textAlign: TextAlign.center,
+      //         style: TextStyle(
+      //           fontSize: 18, color: Colors.white70,fontWeight: FontWeight.bold,
+      //
+      //
+      //         ),
+      //       ),
+      //     ),
+      //     Container(
+      //       padding: const EdgeInsets.all(10),
+      //       width: 100,
+      //       height: 100,
+      //       alignment: Alignment.topCenter,
+      //       decoration: BoxDecoration(color: Colors.grey,
+      //           borderRadius:BorderRadius.circular(10),
+      //           gradient: LinearGradient(colors:[ Colors.blue, Colors.orangeAccent ]),
+      //           boxShadow: [BoxShadow(
+      //             color: Colors.grey,
+      //             blurRadius: 10,
+      //           ),
+      //           ] ),
+      //
+      //       child: Text("Mr.kumar 2nd Box",
+      //         textAlign: TextAlign.center,
+      //         style: TextStyle(
+      //           fontSize: 18, color: Colors.white70,fontWeight: FontWeight.bold,
+      //
+      //
+      //         ),
+      //       ),
+      //     ),
+      //     Container(
+      //       padding: const EdgeInsets.all(10),
+      //       width: 100,
+      //       height: 100,
+      //       alignment: Alignment.topCenter,
+      //       decoration: BoxDecoration(color: Colors.grey,
+      //           borderRadius:BorderRadius.circular(10),
+      //           gradient: LinearGradient(colors:[ Colors.blue, Colors.orangeAccent ]),
+      //           boxShadow: [BoxShadow(
+      //             color: Colors.grey,
+      //             blurRadius: 10,
+      //           ),
+      //           ] ),
+      //
+      //       child: Text("Mr.kumar 3rd Box",
+      //         textAlign: TextAlign.center,
+      //         style: TextStyle(
+      //           fontSize: 18, color: Colors.white70,fontWeight: FontWeight.bold,
+      //
+      //
+      //         ),
+      //       ),
+      //     ),
+      //
+      //   ],
+      //
+      // ),
     ),
       drawer: Drawer(
         child: ListView(
