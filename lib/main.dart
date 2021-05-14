@@ -34,17 +34,28 @@ class HomePage extends StatelessWidget {
       body:Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Card(
-          child: Column(
-           children: [Image.asset(
-               "image/img1.jpg",
+          child: SingleChildScrollView(
+            child: Card(
+            child: Column(
+             children: [Image.asset(
+                 "image/img1.jpg"
+             ),
+               Text("Change my Name",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
+               ),
+               Padding(
+                 padding: const EdgeInsets.all(10.0),
+                 child: TextField(decoration: InputDecoration(hintText: "Enter Some Text",
+                 labelText: "Name"),
 
-           ),
-           ],
+                 ),
+               )
+
+             ],
 
        ),
 
       ),
+          ),
         ),
       // child: row(
       //   mainAxisAlignment:MainAxisAlignment.spaceEvenly  ,
@@ -170,7 +181,7 @@ class HomePage extends StatelessWidget {
       ) ,
       
       floatingActionButton: FloatingActionButton(onPressed: () {},
-      child: Icon(Icons.add_box),
+      child: Icon(Icons.send),
       ),
 
 
