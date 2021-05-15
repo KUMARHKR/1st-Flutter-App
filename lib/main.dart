@@ -15,8 +15,16 @@ void main(){
   ));
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  var myText= "Change My Name";
+  TextEditingController _nameController =TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +47,17 @@ class HomePage extends StatelessWidget {
            children: [Image.asset(
                "image/img1.jpg"
            ),
-             Text("Change my Name",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
+             Text(myText,style: TextStyle(fontSize: 25,
+                 fontWeight: FontWeight.bold),
+             ),
+             SizedBox(
+               height: 20,
              ),
              Padding(
                padding: const EdgeInsets.all(10.0),
-               child: TextField(decoration: InputDecoration(hintText: "Enter Some Text",
+               child: TextField(
+                 controller: _nameController,
+                 decoration: InputDecoration(hintText: "Enter Some Text",
                labelText: "Name"),
 
                ),
@@ -136,7 +150,7 @@ class HomePage extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           padding: const EdgeInsets.all(0),
-          
+
           children: [
             UserAccountsDrawerHeader(
                 accountName: Text("Mr.kumar"),
@@ -175,11 +189,16 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        
+
       ) ,
-      
-      floatingActionButton: FloatingActionButton(onPressed: () {},
-      child: Icon(Icons.send),
+
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        myText=_nameController.text;
+        setState(() {
+
+        });
+      },
+      child: Icon(Icons.send_outlined),
       ),
 
 
